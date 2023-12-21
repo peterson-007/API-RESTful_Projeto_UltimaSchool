@@ -35,6 +35,8 @@ public class ClienteServiceImpl implements ClienteService {
     public void cadastrarCliente(ClienteDTO clienteDTO) throws SQLException {
 
         Cliente cliente = converterClienteDTO(clienteDTO);
+        //setar o número gerado
+        cliente.setNumeroCliente(gerarNumeroCliente());
 
         clienteRepository.save(cliente);
 
@@ -46,6 +48,11 @@ public class ClienteServiceImpl implements ClienteService {
             enderecoRepository.save(endereco);
         }
 
+    }
+
+    private Long gerarNumeroCliente() {
+        // Gera um número aleatório entre 1 e 99999 (5 dígitos)
+        return (long) (Math.random() * 90000 + 10000);
     }
 
 

@@ -1,8 +1,6 @@
 package org.crmweb.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
@@ -17,7 +15,8 @@ public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Column(name = "numero_cliente", unique = true, nullable = false)
+    private Long numeroCliente;
     @Column(name = "nome")
     private String nome;
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)

@@ -11,10 +11,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class InteracaoClienteDTO {
-
-    private int idCliente;
+    @NotBlank(message = "O número do cliente é obrigatório")
+    private Long numeroCliente;
     @NotBlank(message = "A descrição é obrigatória")
     private String descricao;
-    @NotBlank(message = "Obrigatório inserir data e hora")
-    private LocalDateTime dataHora;
 }
