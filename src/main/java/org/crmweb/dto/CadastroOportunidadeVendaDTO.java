@@ -9,7 +9,7 @@ import javax.validation.constraints.NotBlank;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class OportunidadeVendaDTO {
+public class CadastroOportunidadeVendaDTO {
     @NotBlank(message = "O número do cliente é obrigatório")
     private Long numeroCliente;
     @NotBlank(message = "O estágio da venda é obrigatório")

@@ -15,6 +15,4 @@ public class ContatoDTO {
     private String telefone;
     @NotBlank(message = "o email é obrigatório")
     private String email;
-    private int idCliente;
-
 }

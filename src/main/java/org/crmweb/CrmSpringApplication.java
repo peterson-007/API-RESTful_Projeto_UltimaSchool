@@ -7,8 +7,8 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 @SpringBootApplication
-@EntityScan(basePackages = "org.ultimacrm.models")
-@ComponentScan(basePackages = {"org.ultimacrm", "org.ultimacrm.config"})
+@EntityScan(basePackages = "org.crmweb.models")
+@ComponentScan(basePackages = {"org.crmweb", "org.crmweb.config"})
 public class CrmSpringApplication {
 
 	public static void main(String[] args) {

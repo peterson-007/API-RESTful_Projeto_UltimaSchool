@@ -22,5 +22,4 @@ public class EnderecoDTO {
     private String cidade;
     @NotBlank(message = "O CEP é obrigatório")
     private String cep;
-    private int idCliente;
 }
