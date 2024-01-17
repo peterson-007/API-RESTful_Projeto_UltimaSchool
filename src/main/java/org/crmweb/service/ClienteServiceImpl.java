@@ -240,7 +240,7 @@ public class ClienteServiceImpl implements ClienteService {
         try {
             clienteRepository.deleteById(clienteId);
         } catch (EntityNotFoundException e) {
-            throw new RuntimeException("Cliente não encontrado com o ID: " + clienteId);
+            throw new EntityNotFoundException("Cliente não encontrado com o ID: " + clienteId);
         }
     }
 
