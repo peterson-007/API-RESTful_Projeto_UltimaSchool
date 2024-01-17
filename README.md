@@ -20,3 +20,17 @@ Criar documentação clara e concisa que explique as APIs disponíveis e formas 
 
 ## Interface (extra):
 Construir uma interface de usuário simples, usando HTML, CSS e JavaScript, para interagir com as APIs RESTful. A interface deve permitir aos usuários executar todas as operações do sistema.
+
+Swagger
+![image](Exemplos/swagger.jpg)
+
+Cadastrar Cliente
+![image](Exemplos/cadastrar_cliente1.jpg)
+![image](Exemplos/cadastrar_cliente2.jpg)
+Banco de Dados
+![image](Exemplos/cadastrar_cliente3.jpg)
+
+Relatório de Desempenho
+![image](Exemplos/relatorio_desempenho.jpg)
+
+
