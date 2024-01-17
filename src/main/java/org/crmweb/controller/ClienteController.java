@@ -47,19 +47,15 @@ public class ClienteController {
 
     @GetMapping("/{clienteId}")
     @Operation(summary = "Buscar Cliente por ID", description = "Endpoint para buscar um cliente pelo seu ID")
-    public ResponseEntity<Object> buscarClientePorId(
-            @Parameter(
-                    name = "id",
-                    description = "ID do cliente a ser buscado",
-                    example = "1",
-                    required = true
-            )@PathVariable Long clienteId) {
+    public ResponseEntity<Object> buscarClientePorId(@PathVariable Long clienteId) {
+        //resultado é encapsulado em um Optional, indicando que pode ou não haver um cliente com o ID
         Optional<Cliente> clienteOptional = clienteService.buscarClientePorId(clienteId);
 
         return clienteOptional
                 .map(cliente -> ResponseEntity.ok().body(clienteService.converterClienteDTO(cliente)))
                 .orElse(ResponseEntity.notFound().build());
     }
+
 
     @GetMapping("/buscarTodosClientes")
     @Operation(summary = "Buscar Todos os Clientes", description = "Endpoint para buscar todos os clientes")

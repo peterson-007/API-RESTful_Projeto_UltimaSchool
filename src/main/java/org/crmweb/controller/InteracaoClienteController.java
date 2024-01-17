@@ -32,13 +32,7 @@ public class InteracaoClienteController {
 
     @GetMapping("/{interacaoClienteId}")
     @Operation(summary = "Buscar Interação com Cliente por ID", description = "Endpoint para buscar uma interação com o cliente pelo ID")
-    public ResponseEntity<InteracaoCliente> buscarInteracaoPorId(
-            @Parameter(
-                    name = "id",
-                    description = "ID da interação com cliente a ser buscada",
-                    example = "1",
-                    required = true
-            )@PathVariable Long interacaoClienteId) {
+    public ResponseEntity<InteracaoCliente> buscarInteracaoPorId(@PathVariable Long interacaoClienteId) {
         Optional<InteracaoCliente> interacaoOptional = interacaoClienteService.buscarInteracaoClientePorId(interacaoClienteId);
 
         return interacaoOptional
