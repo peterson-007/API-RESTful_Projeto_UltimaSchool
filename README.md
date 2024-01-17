@@ -21,7 +21,7 @@ Criar documentação clara e concisa que explique as APIs disponíveis e formas 
 ## Interface (extra):
 Construir uma interface de usuário simples, usando HTML, CSS e JavaScript, para interagir com as APIs RESTful. A interface deve permitir aos usuários executar todas as operações do sistema.
 
-Swagger
+Swagger UI
 ![image](Exemplos/swagger.jpg)
 
 Cadastrar Cliente
